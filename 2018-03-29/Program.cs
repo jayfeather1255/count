@@ -10,7 +10,7 @@ namespace _2018_03_29
     {
         static void Main(string[] args)
         {
-            // 放入學生姓名、星座、性別、血型資料
+            // 放入學生姓名、星座、性別、血型、身高資料
             string[] Name = { "葉俊廷", "張澤瑜", "王程捷 的咩？", "江儀婷", "張秉華", "陳柏霖", "黃紀瑜", "黃昱維", "蔡逸群", "登琳", "世新魏鈞孝吧", "劉定南", "陳信如", "童信傑", "李岳倫", "鄒和恆", "簡毓玟", "劉子瑄", "蕭紹洋", "李亞宸la", "張以潔", "邱仕紳", "呂家瑩", "世新林鑫佑", "徐均得", "陳佳欣", "張恩瑋", "周詮", "王湘婷", "蕭宇成", "Max Cheung(BANG)", "馬嘉誠Σヽ(ﾟД ﾟ; )ﾉ魔貫光殺砲(ﾟДﾟ)σ━0000", "陳昱嘉", "康珈熏", "盧奕宏", "陳郁佳的大哥黃博涵", "遲正雯", "世新林星彤", "許晏誠ｘ勒是奇多＿８＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝Ｄ　", "許子安", "高子晴", "陳思婷", "矝鵘鮿", "余彥廷", "吳耀輝", "鄭丞智", "林冠廷", "世新何曜宇", "邵喬雨", "張豐愷", "林子晴", "邱雁回", "陳家欣是韓妞", "鄧雅馨", "謝汶珊", "李曼寧", "我是陳柏霖2號", "张钰慈", "鍾宜珊", "raer_tsai", "世新李姳諼", "鄭曼君", "陳柏霖", "世新許子安", "世新方若帆", "李曼寧", "世新遲正雯", "世新周詮" };
             string [] Star = { "金牛", "", "巨蟹", "白羊", "雙魚", "雙子", "天蠍", "巨蟹", "獅子", "雙魚", "雙子", "雙子", "獅子", "雙魚", "天蠍", "天蠍", "處女", "處女", "金牛", "雙魚", "處女", "摩羯", "雙魚", "白羊", "天蠍", "處女", "雙子", "金牛", "雙子", "白羊", "白羊", "摩羯", "射手", "巨蟹", "雙魚", "獅子", "射手", "摩羯", "天蠍", "", "雙魚", "雙子", "", "雙魚", "處女", "金牛", "天秤", "水瓶", "巨蟹", "處女", "白羊", "摩羯", "水瓶", "天秤", "金牛", "天蠍", "天蠍", "處女", "雙子", "", "摩羯", "天蠍", "雙子", "", "獅子", "天蠍", "射手", "金牛" };
             string [] BG = { "男", "男", "男", "女", "男", "男", "女", "男", "男", "男", "男", "男", "女", "男", "男", "男", "女", "女", "男", "男", "女", "男", "女", "男", "男", "女", "男", "男", "女", "男", "男", "男", "男", "女", "男", "男", "女", "女", "男", "男", "女", "女", "男", "男", "男", "男", "男", "男", "女", "男", "女", "女", "女", "女", "女", "女", "男", "女", "女", "女", "女", "女", "男", "男", "女", "女", "女", "男" };
@@ -25,11 +25,9 @@ namespace _2018_03_29
             // Bsum、Gsum 分別放男女生身高總和
             int BTall=0,GTall = 0;
             int Bsum=0,Gsum = 0;
-            int Super = 0;
 
-            // 計算男女、各血型數量，及找出天蠍座O型的人
-            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("天蠍座O型的人有:");
+            // 計算男女、各血型數量，及找出天蠍座O型的人
             for (int i = 0; i < Blood.Length; i++)
             {                    
                 if (BG[i] == "女")
@@ -79,8 +77,7 @@ namespace _2018_03_29
             }
 
             // 計算全班身高最大值、最小值
-            int Max = 0;
-            int min = 200;
+            int Max = 0, min = 200;
             for (int i = 0; i < heights.Length; i++)
             {
                 if (heights[i] > 100 && heights[i] < 200)
@@ -114,23 +111,23 @@ namespace _2018_03_29
             double GTAverage = Math.Round((double)Gsum / GTall,1);
             double TallAvg = Math.Round((double)(Bsum + Gsum) / (BTall + GTall),1);
                        
-            // 印出男生人數&百分比、身高，並將顏色設為藍色
-            Console.ForegroundColor = ConsoleColor.Cyan;
+            // 將顏色改為藍色，印出男生人數&百分比、身高
+            Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("\n"+"男生人數: " + boys + "人，百分比: " + BPercent + " %");
             Console.WriteLine("男生身高總和: " + Bsum + " 公分" + "\n" + "男生身高平均: " + BTAverage + " 公分" +"\n" );
             
-            // 印出女生人數&百分比、身高，並將顏色設為藍色
-            Console.ForegroundColor = ConsoleColor.Magenta;
+            // 將顏色改為紫色，印出女生人數&百分比、身高
+            Console.ForegroundColor = ConsoleColor.DarkMagenta;
             Console.WriteLine("女生人數: " + girls + "人，百分比: " + GPercent + " %");
             Console.WriteLine("女生身高總和: " + Gsum + " 公分" + "\n" + "女生身高平均: " + GTAverage + " 公分" +"\n" );
 
-
-            // 文字顏色為黃色
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            // 印出全班身高最大最小值
+            // 將顏色改為綠色，印出全班身高最大最小值
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("身高最高: " + Max + " 公分" + "\n" + "身高最矮: " + min + " 公分");
-            Console.WriteLine("全班身高平均: " + TallAvg + " 公分" + "\n");                      
+            Console.WriteLine("全班身高平均: " + TallAvg + " 公分" + "\n");
 
+            // 將文字顏色改為黃色
+            Console.ForegroundColor = ConsoleColor.Yellow;
             // A型人數、百分比(長條圖)
             Console.WriteLine("A型人數有" + A + "人，" + "百分比: " + AStudents + "%");
             for (int i = 0; i < Blood.Length; i++)
