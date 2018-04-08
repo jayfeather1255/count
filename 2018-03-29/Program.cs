@@ -26,10 +26,10 @@ namespace _2018_03_29
             int AB = 0;
             int others = 0;
 
-            // GTall 用來計算輸入數值正確的女生個數
-            // Gsum 放女生身高總和
-            int GTall = 0;
-            int Gsum = 0;
+            // BTall、GTall 分別用來計算輸入數值正確的男女生個數
+            // Bsum、Gsum 分別放男女生身高總和
+            int BTall=0,GTall = 0;
+            int Bsum=0,Gsum = 0;
 
             // 計算男女、各血型數量
             for (int i = 0; i < Blood.Length; i++)
@@ -50,6 +50,11 @@ namespace _2018_03_29
                 else if (BG[i] == "男")
                 {
                     boys++;
+                    if (heights[i] > 100 && heights[i] < 200)
+                    {
+                        BTall++;
+                        Bsum = Bsum + heights[i];
+                    }
                 }
 
                 if (Blood[i] == "A")
@@ -106,7 +111,8 @@ namespace _2018_03_29
             double ABStudents = Math.Round((double)AB / Blood.Length * 100,0);
             double Others = Math.Round((double)others / Blood.Length * 100, 0);
 
-            // 計算女生身高平均
+            // 計算男女生身高平均
+            double BTAverage = Math.Round((double)Bsum / BTall,1);
             double GTAverage = Math.Round((double)Gsum / GTall,1);
 
             // 文字顏色為黃色
@@ -116,9 +122,8 @@ namespace _2018_03_29
             Console.WriteLine("女生人數: " + girls+"人，百分比: "+GPercent+" %"+"\n"+"男生人數: "+boys+ "人，百分比: " + BPercent+" %" + "\n");
            
 
-            // 印出女生身高
-            Console.WriteLine("女生身高總和: " + GTall+"\n"+"女生身高平均: "+ GTAverage +"\n");
-
+            // 印出男女生身高
+            Console.WriteLine("男生身高總和: " + Bsum+"\n"+"男生身高平均: "+BTAverage+"\n"+"女生身高總和: " + Gsum+"\n"+"女生身高平均: "+ GTAverage +"\n");
             // 印出全班身高最大最小值
             Console.WriteLine("身高最高: " + Max + "公分" + "\n" + "身高最矮: " + min + "公分"+"\n");
                                   

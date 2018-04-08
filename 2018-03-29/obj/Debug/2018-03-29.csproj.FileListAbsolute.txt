@@ -5,3 +5,10 @@ C:\Users\信如\Desktop\學校\程式\git\2018-03-29\2018-03-29\2018-03-29\obj\D
 C:\Users\信如\Desktop\學校\程式\git\2018-03-29\2018-03-29\2018-03-29\obj\Debug\2018-03-29.csproj.CoreCompileInputs.cache
 C:\Users\信如\Desktop\學校\程式\git\2018-03-29\2018-03-29\2018-03-29\obj\Debug\2018-03-29.exe
 C:\Users\信如\Desktop\學校\程式\git\2018-03-29\2018-03-29\2018-03-29\obj\Debug\2018-03-29.pdb
+C:\Users\信如\Desktop\學校\程式\git\2018-03-29 count\2018-03-29\2018-03-29\bin\Debug\2018-03-29.exe.config
+C:\Users\信如\Desktop\學校\程式\git\2018-03-29 count\2018-03-29\2018-03-29\bin\Debug\2018-03-29.exe
+C:\Users\信如\Desktop\學校\程式\git\2018-03-29 count\2018-03-29\2018-03-29\bin\Debug\2018-03-29.pdb
+C:\Users\信如\Desktop\學校\程式\git\2018-03-29 count\2018-03-29\2018-03-29\obj\Debug\2018-03-29.csprojResolveAssemblyReference.cache
+C:\Users\信如\Desktop\學校\程式\git\2018-03-29 count\2018-03-29\2018-03-29\obj\Debug\2018-03-29.csproj.CoreCompileInputs.cache
+C:\Users\信如\Desktop\學校\程式\git\2018-03-29 count\2018-03-29\2018-03-29\obj\Debug\2018-03-29.exe
+C:\Users\信如\Desktop\學校\程式\git\2018-03-29 count\2018-03-29\2018-03-29\obj\Debug\2018-03-29.pdb
