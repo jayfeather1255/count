@@ -128,6 +128,7 @@ namespace _2018_03_29
 
             // 將文字顏色改為黃色
             Console.ForegroundColor = ConsoleColor.Yellow;
+
             // A型人數、百分比(長條圖)
             Console.WriteLine("A型人數有" + A + "人，" + "百分比: " + AStudents + "%");
             for (int i = 0; i < Blood.Length; i++)
